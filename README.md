@@ -1,17 +1,30 @@
-# Quartz v5
+# cracktun.es
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+The [Obsidian](https://obsidian.md) vault behind **[cracktun.es](https://cracktun.es)** —
+home of [Crack Tunes](https://github.com/cycle-five/cracktunes), plus a digital garden
+of dev logs, book summaries, and notes on math and type theory.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+Published with [Quartz v5](https://quartz.jzhao.xyz) and deployed to GitHub Pages by
+GitHub Actions on every push to `master`.
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+## Editing
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+The vault lives in [`content/`](content/) — open **that** folder in Obsidian, not the
+repo root. Write, commit, push; the site rebuilds automatically.
 
-## Sponsors
+```sh
+npm i                       # first time only
+npx quartz build --serve    # local preview at http://localhost:8080
+```
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+## Updating Quartz
+
+```sh
+git fetch quartz && git merge quartz/v5
+```
+
+Styling lives in `quartz/styles/`; site settings in `quartz.config.yaml`.
+
+---
+cracktun.es is a product of, and wholly owned by, Cycle Five Syndicate.
+Quartz is MIT-licensed by Jacky Zhao — see [`LICENSE.txt`](LICENSE.txt).
