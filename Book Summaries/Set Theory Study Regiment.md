@@ -1,0 +1,16 @@
+Page 1, arbitary -> arbitrary
+![](Pasted%20image%2020240318144229.png
+Sentential logic We go into the mathematical theory of the simplest logical notions: the meaning of “and”, “or”, “implies”, “if and only if” and related notions. The basic idea here is to describe a formal language for these notions, and say precisely what it means for statements in this language to be true. The first step is to describe the language, without saying anything mathematical about meanings. We need very little background to carry out this development. ω is the set of all natural numbers 0, 1, 2, . . .. Let ω + be the set of all positive integers. For each positive integer m let m′ = {0, . . ., m − 1}. A finite sequence is a function whose domain is m′ for some positive integer m; the values of the function can be arbitrary.
+To keep the treatment strictly mathematical, we will define the basic “symbols” of the language to just be certain positive integers, as follows:
+
+Negation symbol: the integer 1.
+Implication symbol: the integer 2.
+Sentential variables: all integers ≥ 3.
+
+Let Expr be the collection of all finite sequences of positive integers; we think of these sequences as expressions. Thus an expression is a function mapping m′ into ω +, for some positive integer m. Such sequences are frequently indicated by ϕ0, . . ., ϕm−1. The case m = 1 is important; here the notation is hϕi.
+
+The one-place function ¬ mapping Expr into Expr is defined by ¬ϕ = h1i⌢ϕ for any expression ϕ. Here in general ϕ⌢ψ is the sequence ϕ followed by the sequence ψ.
+
+The two-place function → mapping Expr×Expr into Expr is defined by ϕ → ψ = h2i⌢ϕ⌢ψ for any expressions ϕ, ψ. (For any sets A, B, A × B is the set of all ordered pairs (a, b) with a ∈ A and b ∈ B. So Expr × Expr is the set of all ordered pairs (ϕ, ψ) with ϕ, ψ expressions.)
+
+For any natural number n, let Sn = hn + 3i. Now we define the notion of a sentential formula—an expression which, suitably interpreted, makes sense. We do this definition by defining a sentential formula construction, which by definition is a sequence hϕ0, . . ., ϕm−1i with the following property: for each i < m, one of the following holds: ϕi = Sj for some natural number j. There is a k < i such that ϕi = ¬ϕk. There exist k, l < i such that ϕi = (ϕk → ϕl). Then a sentential formula is an expression which appears in some sentential formula construction. The following proposition formulates the principle of induction on sentential formulas. Proposition 1.1. Suppose that M is a collection of sentential formulas, satisfying the following conditions. 1 (i) Si is in M, for every natural number i. (ii) If ϕ is in M, then so is ¬ϕ. (iii) If ϕ and ψ are in M, then so is ϕ → ψ. Then M consists of all sentential formulas. Proof. Suppose that θ is a sentential formula; we want to show that θ ∈ M. Let hτ0, . . ., τmi be a sentential formula construction with τt = θ, where 0 ≤ t ≤ m. We prove by complete induction on i that for every i ≤ m, τi ∈ M. Hence by applying this to i = t we get θ ∈ M. So assume that for every j < i, the sentential formula τj is in M. Case 1. τi is Ss for some s. By (i), τi ∈ M. Case 2. τi is ¬τj for some j < i. By the inductive hypothesis, τj ∈ M, so τi ∈ M by (ii). Case 3. τi is τj → τk for some j, k < i. By the inductive hypothesis, τj ∈ M and τk ∈ M, so τi ∈ M by (iii).

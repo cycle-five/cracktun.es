@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Environment Architecture</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 1000px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .layer {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            position: relative;
+        }
+        .system-layer {
+            background: #e3f2fd;
+            border: 2px solid #2196F3;
+        }
+        .pyenv-layer {
+            background: #f3e5f5;
+            border: 2px solid #9c27b0;
+        }
+        .tool-layer {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+        }
+        .project-layer {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+        }
+        .layer-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .layer-title::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .system-layer .layer-title::before { background: #2196F3; }
+        .pyenv-layer .layer-title::before { background: #9c27b0; }
+        .tool-layer .layer-title::before { background: #4caf50; }
+        .project-layer .layer-title::before { background: #ff9800; }
+        
+        .box {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 6px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-size: 14px;
+        }
+        .arrow {
+            text-align: center;
+            font-size: 24px;
+            color: #666;
+            margin: 10px 0;
+        }
+        .description {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .note {
+            background: #fff9c4;
+            border-left: 4px solid #fbc02d;
+            padding: 12px;
+            margin-top: 20px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .flow-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 5px 0;
+        }
+        .flow-indicator::before {
+            content: '→';
+            color: #666;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐍 Python Development Environment Architecture</h1>
+        
+        <div class="layer system-layer">
+            <div class="layer-title">System Level (CachyOS/Arch)</div>
+            <div class="box">📦 System Python (/usr/bin/python)</div>
+            <div class="box">🔧 python-pip</div>
+            <div class="description">Only for system tools and bootstrapping. Don't install packages here!</div>
+        </div>
+
+        <div class="arrow">↓</div>
+
+        <div class="layer pyenv-layer">
+            <div class="layer-title">Python Version Management (pyenv)</div>
+            <div class="grid">
+                <div class="box">🐍 Python 3.12.11</div>
+                <div class="box">🐍 Python 3.11.9</div>
+                <div class="box">🐍 Python 3.10.x</div>
+                <div class="box">🐍 Python 3.13.x</div>
+            </div>
+            <div class="description">Isolated Python versions in ~/.pyenv/versions/</div>
+            <div class="flow-indicator">Switch versions: pyenv global/local/shell</div>
+        </div>
+
+        <div class="arrow">↓ branches to ↓</div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="layer tool-layer">
+                <div class="layer-title">Global CLI Tools (pipx)</div>
+                <div class="box">📊 ipython</div>
+                <div class="box">🎨 black</div>
+                <div class="box">⚡ ruff</div>
+                <div class="box">📓 jupyter</div>
+                <div class="box">🚀 uv</div>
+                <div class="description">Each tool in its own isolated venv (~/.local/pipx/venvs/)</div>
+                <div class="flow-indicator">No dependency conflicts!</div>
+            </div>
+
+            <div class="layer project-layer">
+                <div class="layer-title">Project Environments</div>
+                <div style="margin: 10px 0;">
+                    <strong>Option A: uv (recommended)</strong>
+                    <div class="box">📁 project1/.venv</div>
+                    <div class="box">📁 project2/.venv</div>
+                </div>
+                <div style="margin: 10px 0;">
+                    <strong>Option B: pip + venv</strong>
+                    <div class="box">📁 project3/venv</div>
+                </div>
+                <div class="description">Project-specific dependencies, fully isolated</div>
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>🔑 Key Concepts:</strong><br>
+            • <strong>System Python</strong>: Bootstrap only, leave untouched<br>
+            • <strong>pyenv</strong>: Manages multiple Python versions<br>
+            • <strong>pipx</strong>: Installs CLI tools globally, each in isolation<br>
+            • <strong>pip</strong>: Used inside virtual environments for project deps<br>
+            • <strong>uv</strong>: Fast alternative to pip+venv (10-100x faster)
+        </div>
+
+        <div class="note" style="background: #e1f5fe; border-left-color: #0288d1;">
+            <strong>📋 Workflow:</strong><br>
+            1. Use pyenv to set Python version for project<br>
+            2. Use uv/venv to create isolated environment<br>
+            3. Use pip/uv to install packages in that environment<br>
+            4. Use pipx for tools you want available everywhere (black, ruff, etc.)
+        </div>
+    </div>
+</body>
+</html>

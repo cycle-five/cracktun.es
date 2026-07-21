@@ -1,0 +1,1 @@
+I'm always looking for good documentation and visualization tools to help in understanding, and conceptualizing the code, and I just found another one that I'm quite impressed with called DB schema, here's a markdown page it generated unaltered [DB Schema](cracktunes_main_layout.md)
