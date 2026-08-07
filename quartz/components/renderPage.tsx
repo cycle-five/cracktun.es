@@ -372,5 +372,25 @@ export function renderPage(
     </html>
   )
 
-  return "<!DOCTYPE html>\n" + render(doc)
+  // Compile banner for View Source: this HTML is a Quartz build artifact from
+  // Markdown under content/, not hand-authored page source.
+  const relativePath = (componentData.fileData.relativePath ?? "") as string
+  const contentPath = relativePath ? `content/${relativePath}` : ""
+  const blobPath = relativePath
+    ? relativePath
+        .split("/")
+        .map((seg) => encodeURIComponent(seg))
+        .join("/")
+    : ""
+  const sourceLine = contentPath
+    ? `  This page ← ${contentPath}\n  Source: https://github.com/cycle-five/cracktun.es/blob/master/content/${blobPath}`
+    : `  This page ← generated (no Markdown source; slug: ${slug})\n  Source: https://github.com/cycle-five/cracktun.es`
+  const compileBanner = `<!--
+  cracktun.es — static HTML produced by Quartz from this repo.
+  Authoring format: Obsidian Markdown under content/ (not this file).
+${sourceLine}
+  Rebuild: npx quartz build
+-->\n`
+
+  return "<!DOCTYPE html>\n" + compileBanner + render(doc)
 }
