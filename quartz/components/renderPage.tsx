@@ -378,22 +378,29 @@ export function renderPage(
   // filePath is set only for real on-disk files (processors/parse.ts). Virtual
   // pages (404, tag, folder) get a synthesized relativePath but no filePath —
   // using relativePath alone would link to files that do not exist in the repo.
-  // Drop the path line when it contains "--": a "-->" in a freeform Obsidian
-  // filename would terminate the HTML comment early.
+  //
+  // HTML comments may not contain "--", and a "-->" terminates the banner early
+  // and leaks the remainder into the document. Obsidian filenames are freeform,
+  // so every interpolated value is sanitised rather than gating one line: runs
+  // are spaced out for display, and percent-encoded in the URL (GitHub decodes
+  // %2D). Guarding only the path would still let the slug break out via the
+  // fallback line, and would misreport a real "--" note as having no source.
+  const safeText = (s: string) => s.replace(/--+/g, (m) => m.split("").join(" "))
+  const safeUrl = (s: string) => s.replace(/-/g, "%2D")
+
   const relativePath = componentData.fileData.filePath
     ? (componentData.fileData.relativePath ?? "")
     : ""
-  const pathSafe = relativePath.length > 0 && !relativePath.includes("--")
-  const contentPath = pathSafe ? `content/${relativePath}` : ""
-  const blobPath = pathSafe
+  const contentPath = relativePath ? `content/${safeText(relativePath)}` : ""
+  const blobPath = relativePath
     ? relativePath
         .split("/")
-        .map((seg) => encodeURIComponent(seg))
+        .map((seg) => safeUrl(encodeURIComponent(seg)))
         .join("/")
     : ""
   const sourceLine = contentPath
     ? `  This page ← ${contentPath}\n  Source: https://github.com/cycle-five/cracktun.es/blob/master/content/${blobPath}`
-    : `  This page ← generated (no Markdown source; slug: ${slug})\n  Source: https://github.com/cycle-five/cracktun.es`
+    : `  This page ← generated (no Markdown source; slug: ${safeText(slug)})\n  Source: https://github.com/cycle-five/cracktun.es`
   const compileBanner = `<!--
   cracktun.es — static HTML produced by Quartz from this repo.
   Authoring format: Obsidian Markdown under content/ (not this file).
