@@ -374,9 +374,18 @@ export function renderPage(
 
   // Compile banner for View Source: this HTML is a Quartz build artifact from
   // Markdown under content/, not hand-authored page source.
-  const relativePath = (componentData.fileData.relativePath ?? "") as string
-  const contentPath = relativePath ? `content/${relativePath}` : ""
-  const blobPath = relativePath
+  //
+  // filePath is set only for real on-disk files (processors/parse.ts). Virtual
+  // pages (404, tag, folder) get a synthesized relativePath but no filePath —
+  // using relativePath alone would link to files that do not exist in the repo.
+  // Drop the path line when it contains "--": a "-->" in a freeform Obsidian
+  // filename would terminate the HTML comment early.
+  const relativePath = componentData.fileData.filePath
+    ? (componentData.fileData.relativePath ?? "")
+    : ""
+  const pathSafe = relativePath.length > 0 && !relativePath.includes("--")
+  const contentPath = pathSafe ? `content/${relativePath}` : ""
+  const blobPath = pathSafe
     ? relativePath
         .split("/")
         .map((seg) => encodeURIComponent(seg))
