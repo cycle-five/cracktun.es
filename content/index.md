@@ -13,7 +13,6 @@ summaries, and working notes on math and type theory.
 
 - [[Crack Tunes]] — the Discord music bot · [[Privacy Policy]] · [[Terms of Service]]
 - [[RuneCast]] · [[RuneCast Privacy Policy|Privacy]] · [[RuneCast ToS|ToS]]
-- Spell Cast Redux · [[Spell Cast Redux Privacy Policy|Privacy]] · [[Spell Cast Redux ToS|ToS]]
 - [[Referral Codes]] · [[Avatars]]
 
 ## Digital garden

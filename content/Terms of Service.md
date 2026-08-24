@@ -5,7 +5,7 @@ Last updated: 2024-02-11
 
 ## 1. Introduction
 
-Welcome to Crack T#unes, an open-source Discord music bot designed to enhance your Discord experience with music playback capabilities. Our service allows users to access music and related features directly within Discord. These Terms of Service ("Terms") govern your use of Crack Tunes and its associated services (collectively, the "Service").
+Welcome to Crack Tunes, an open-source Discord music bot designed to enhance your Discord experience with music playback capabilities. Our service allows users to access music and related features directly within Discord. These Terms of Service ("Terms") govern your use of Crack Tunes and its associated services (collectively, the "Service").
 
 ## 2. Acceptance of Terms
 
@@ -25,7 +25,7 @@ To access Premium Services, users must subscribe to the Service. Subscriptions a
 
 ## 6. Intellectual Property Rights
 
-The Service and its original content, features, and functionality are and will remain the exclusive property of Cycle Five and its licensors. The Service is provided under the [MIT License](https://raw.githubusercontent.com/cycle-five/cracktunes/master/LICENSE), and its source code is available for use, modification, and distribution in accordance with the terms of that license.
+The Service and its original content, features, and functionality are and will remain the exclusive property of **Cycle Five Syndicate**, a Delaware corporation ("Cycle Five Syndicate"), and its licensors. The Service is provided under the [MIT License](https://raw.githubusercontent.com/cycle-five/cracktunes/master/LICENSE), and its source code is available for use, modification, and distribution in accordance with the terms of that license.
 
 ## 7. Disclaimers and Limitation of Liability
 
@@ -41,7 +41,7 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
 
 ## 10. Governing Law
 
-These Terms shall be governed and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.
+These Terms shall be governed and construed in accordance with the laws of the State of Delaware, without regard to its conflict of law provisions.
 
 ## Contact Us
 
