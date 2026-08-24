@@ -1,6 +1,6 @@
 # Terms of Service for RuneCast
 
-These Terms of Service (“Terms”) govern your access to and use of RuneCast (the "Service"), a Boggle-like word game activity on Discord, and constitute a binding legal agreement between you and the developers of RuneCast ("we", "us", or "our").
+These Terms of Service (“Terms”) govern your access to and use of RuneCast (the "Service"), a Boggle-like word game activity on Discord, and constitute a binding legal agreement between you and **Cycle Five Syndicate**, a Delaware corporation ("Cycle Five Syndicate", "we", "us", or "our").
 
 Please read these Terms carefully before using our Service. By accessing or using our Service, you agree to be bound by these Terms as well as our Privacy Policy. If you do not agree, do not access or use our Service.
 
@@ -8,9 +8,9 @@ We may modify these Terms at any time. If we make material changes, we will noti
 
 ## 1. Eligibility and Accounts
 
-You must comply with Discord's age requirements (generally 13+) and provide accurate details when participating. Participation is tied to your Discord account.
+You must meet Discord's minimum age requirements for your region and provide accurate details when participating. Participation is tied to your Discord account.
 
-Do not sell, trade, gift, or purchase access or advantages. Account sharing for unfair advantage is prohibited.
+You may not sell, trade, gift, or buy accounts, access, or in-game advantages outside the Service. This does not restrict purchases you make through Discord's official store as described in Section 4. Account sharing for unfair advantage is prohibited.
 
 Choose behaviors and communications that follow our policies and Discord's guidelines. Usernames, avatars, and in-game actions may not be offensive, impersonate others, or infringe rights.
 
@@ -34,31 +34,43 @@ Do not share third-party copyrighted content unless you have express permission 
 
 We respect copyright law and respond to properly filed notices. We reserve discretion to remove or disable allegedly infringing content.
 
-## 4. Termination for Breach
+## 4. Purchases and Subscriptions
+
+RuneCast offers optional paid items, including a one-time themes bundle and a recurring Premium subscription.
+
+**All purchases are made through Discord.** Discord is the seller and merchant of record for every transaction; we never receive or store your payment card details. Your purchase is therefore also governed by Discord's own terms, and any billing question, cancellation, or refund request must be directed to Discord.
+
+Paid entitlements are granted to your Discord account and are honored wherever you play the Service. Subscriptions renew automatically until cancelled, on the schedule Discord discloses at the time of purchase. Cancelling stops future renewals; access continues until the end of the period you have already paid for.
+
+Paid items are licensed to you for use within the Service, not sold to you as property. They have no cash value, cannot be transferred or exchanged between accounts, and may be modified or discontinued as the game changes. If we permanently discontinue a paid feature you are actively subscribed to, we will say so via Discord announcement.
+
+## 5. Termination for Breach
 
 We may terminate or suspend your access for serious or repeated breaches of these Terms. Temporary or permanent bans may occur based on severity.
 
 Severe cheating, harassment, illegal behavior, or egregious policy violations may result in immediate termination from the activity.
 
-## 5. Disclaimers
+## 6. Disclaimers
 
 Our Service is provided on an “as is” basis without warranties of any kind. We disclaim all express and implied warranties, including uninterrupted availability or error-free gameplay.
 
 We are not liable for any loss of scores, progress, virtual rewards, or other incidental, consequential, indirect, or special damages arising from use of our Service.
 
-## 6. Limitation of Liability
+## 7. Limitation of Liability
 
-Our maximum liability arising out of or relating to use of our Service is limited to $0, as this is a free activity.
+To the maximum extent permitted by law, our total liability arising out of or relating to your use of the Service is limited to the greater of (a) the total amount you paid for the Service in the twelve months preceding the event giving rise to the claim, or (b) fifty US dollars ($50).
 
-## 7. Governing Law
+Some jurisdictions do not allow the exclusion or limitation of certain damages, so parts of this section may not apply to you.
 
-These Terms are governed by the laws of the United States without regard to conflict of law principles. Any dispute related to our Service must be handled in courts in California.
+## 8. Governing Law
 
-## 8. Arbitration
+These Terms are governed by the laws of the State of Delaware, without regard to conflict of law principles. Subject to Section 9, any dispute related to our Service must be handled in the state or federal courts located in Delaware.
+
+## 9. Arbitration
 
 Any dispute must be resolved through individual binding arbitration. Arbitration precludes class actions or jury trials.
 
-## 9. Miscellaneous
+## 10. Miscellaneous
 
 ### Severability
 
@@ -90,4 +102,4 @@ Please contact us via Discord support or email at lothrop <at> cracktun <dot> es
 
 ### Effective Date
 
-These Terms are effective as of November 28, 2025, and supersede all previous versions.
+These Terms are effective as of August 24, 2026, and supersede all previous versions, including the version effective November 28, 2025.

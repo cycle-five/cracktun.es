@@ -1,10 +1,12 @@
 # Privacy Policy for RuneCast
 
-This Privacy Policy governs the collection, use, and sharing of personal information by RuneCast, a Discord-based word game activity developed by its creators. By using RuneCast, you agree to the terms of this Privacy Policy.
+This Privacy Policy governs the collection, use, and sharing of personal information by **Cycle Five Syndicate**, a Delaware corporation ("we", "us", or "our"), through RuneCast, a Discord-based word game activity. By using RuneCast, you agree to the terms of this Privacy Policy.
 
 ## Information We Collect
 
-We collect minimal information to facilitate gameplay, such as your Discord user ID, username, server and channel information, submitted words, and game scores. We may also collect usage data, such as participation frequency and session duration. No sensitive personal data like emails, addresses, or payment info is collected, as this is a free activity.
+We collect minimal information to facilitate gameplay, such as your Discord user ID, username, server and channel information, submitted words, and game scores. We may also collect usage data, such as participation frequency and session duration.
+
+If you buy the themes bundle or a Premium subscription, we store a record of that entitlement against your Discord account so we can unlock the content you paid for. **We do not collect or store payment card details, billing addresses, or email addresses.** All purchases are processed by Discord as merchant of record, and your payment information stays with Discord.
 
 ## How We Use Your Information
 
@@ -32,4 +34,4 @@ If you have any questions or concerns about this Privacy Policy, please contact 
 
 ## Effective Date
 
-This Privacy Policy is effective as of November 28, 2025.
+This Privacy Policy is effective as of August 24, 2026, and supersedes the version effective November 28, 2025.

@@ -1,6 +1,6 @@
 # Privacy Policy for Crack Tunes
 
-Effective Date: [2024-08-12]
+Effective Date: 2024-08-12
 
 ## Introduction
 
