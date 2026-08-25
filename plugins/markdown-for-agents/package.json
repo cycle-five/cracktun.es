@@ -1,15 +1,25 @@
 {
   "name": "markdown-for-agents",
   "version": "1.0.0",
-  "description": "Emit <slug>.md beside every <slug>.html so agents can read the source instead of 21x its weight in HTML",
+  "description": "Emit <slug>.md beside every <slug>.html so agents can read the source instead of ~21x its weight in HTML",
   "type": "module",
-  "main": "src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
   },
+  "files": ["dist", "README.md"],
   "quartz": {
     "type": "emitter",
     "entry": "MarkdownForAgents"
+  },
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --format=esm --packages=external --outfile=dist/index.js && tsc --emitDeclarationOnly --declaration --outDir dist src/index.ts",
+    "typecheck": "tsc --noEmit"
   },
   "license": "MIT",
   "private": true
