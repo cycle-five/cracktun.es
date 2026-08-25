@@ -1,0 +1,24 @@
+# cracktun.es
+#
+# Everything published here is meant to be read -- by people and by machines
+# alike. This site exists because the work on it is worth consuming; limiting
+# who or what may consume it would defeat the point.
+#
+# So: nothing is disallowed, and the permission is stated positively rather
+# than left to inference. Anything private is not published at all -- it is
+# excluded from the build by `ignorePatterns` in quartz.config.yaml, so it
+# never reaches this server and needs no rule here. A robots.txt that named
+# private paths would advertise them.
+
+# Content-Signal is Cloudflare's machine-readable statement of intent, and its
+# own spec says an omitted signal "neither grants nor restricts permission".
+# Silence is therefore ambiguous, not permissive -- which is why these are
+# written out. All three uses are granted:
+#   search:   building a search index and returning links and excerpts
+#   ai-input: retrieval, grounding, real-time answers (RAG and similar)
+#   ai-train: training and fine-tuning models
+User-agent: *
+Content-Signal: search=yes,ai-input=yes,ai-train=yes
+Allow: /
+
+Sitemap: https://cracktun.es/sitemap.xml

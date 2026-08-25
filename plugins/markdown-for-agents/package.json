@@ -1,0 +1,16 @@
+{
+  "name": "markdown-for-agents",
+  "version": "1.0.0",
+  "description": "Emit <slug>.md beside every <slug>.html so agents can read the source instead of 21x its weight in HTML",
+  "type": "module",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "quartz": {
+    "type": "emitter",
+    "entry": "MarkdownForAgents"
+  },
+  "license": "MIT",
+  "private": true
+}
