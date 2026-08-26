@@ -245,18 +245,16 @@ plugins:
       position: body
       priority: 100
       display: all
-  # Local plugin, lives in this repo at plugins/markdown-for-agents/.
-  # Emits <slug>.md beside every <slug>.html so an agent can fetch the source
-  # instead of ~21x its weight in HTML.
+  # serve-the-source: emits <slug>.md beside every <slug>.html so an agent can
+  # fetch the source instead of ~21x its weight in HTML. Extracted from this
+  # repo into its own module; see github.com/cycle-five/serve-the-source.
   #
   # 🪤 ORDER RELATIVE TO encrypted-pages DOES NOT MATTER, and it is worth
   # knowing why rather than guessing. encrypted-pages is order 900 -- well
-  # AFTER this one -- yet the encryption guard still holds, because
+  # AFTER this one -- yet its encryption guard still holds, because
   # data.encrypted is set by that plugin's TRANSFORMER during the parse phase,
-  # which completes before any emitter runs at all. Proven by building an
-  # encrypted test page: its HTML carried data-encrypted and no .md was
-  # emitted for it.
-  - source: ./plugins/markdown-for-agents
+  # which completes before any emitter runs at all.
+  - source: github:cycle-five/serve-the-source
     enabled: true
     options: {}
     order: 246
