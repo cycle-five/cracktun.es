@@ -1,6 +1,7 @@
 # Privacy Policy for Crack Tunes
 
 Effective Date: 2024-08-12
+Last Updated: 2026-09-30
 
 ## Introduction
 
@@ -17,6 +18,18 @@ Welcome to Crack Tunes! Your privacy is important to us. This Privacy Policy exp
 - **To Provide Services**: We use your information to operate and improve Crack Tunes.
 - **Customization**: To personalize your experience and suggest features.
 - **Analytics**: To analyze usage patterns and improve our services.
+
+## Web Dashboard
+
+The Crack Tunes dashboard at [dash.cracktun.es](https://dash.cracktun.es) shows a server's music queue to members of that server. It also lets members reorder the queue while they are in the bot's voice channel. You sign in with Discord, and we ask Discord only for the `identify` permission. We never receive your email address, your list of servers, or your messages.
+
+**In your browser**, a signed cookie holds your Discord user ID and username for 24 hours. While you are signing in, two more cookies protect that step, and they expire after 10 minutes.
+
+**On our server, in memory only**, we keep a record for each person who has signed in since the bot last restarted. It holds the profile Discord returns when you sign in, which is your user ID, username, display name and avatar URL, along with a Discord refresh token. Signing out discards the refresh token, and a restart of the bot discards everything. None of this is written to a database.
+
+To decide whether you may view a server's queue, the bot asks Discord whether you are a member of that server and remembers the answer for five minutes.
+
+**In our logs**, we record your user ID and username when you sign in and out, and your user ID when you move a track. Logs are used to operate and troubleshoot the bot.
 
 ## Sharing Your Information
 
