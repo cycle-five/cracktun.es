@@ -1,7 +1,7 @@
 # Privacy Policy for Crack Tunes
 
 Effective Date: 2024-08-12
-Last Updated: 2026-09-30
+Last Updated: 2026-10-01
 
 ## Introduction
 
@@ -30,6 +30,23 @@ The Crack Tunes dashboard at [dash.cracktun.es](https://dash.cracktun.es) shows 
 To decide whether you may view a server's queue, the bot asks Discord whether you are a member of that server and remembers the answer for five minutes.
 
 **In our logs**, we record your user ID and username when you sign in and out, and your user ID when you move a track. Logs are used to operate and troubleshoot the bot.
+
+A track you move is also recorded in the queue history described below.
+
+## Queue History
+
+When the queue in a server changes, Crack Tunes records what changed and who changed it. This covers adding, removing, moving and skipping tracks, pausing and resuming, clearing, shuffling and stopping the queue, and the bot leaving the voice channel. It applies whether the change came from a command, the web dashboard, or the bot on its own, such as autoplay or leaving when idle.
+
+Each record holds:
+
+- the time;
+- the server and voice channel;
+- the text channel a command was used in;
+- your Discord user ID, or a note that the bot acted on its own;
+- the command;
+- the tracks involved, by title and link.
+
+We use these records to operate the bot and to answer questions about who changed a server's queue, such as when a queue was cleared unexpectedly. They are stored in our database. For now we keep them indefinitely. We plan to reduce older records to daily totals that do not identify anyone, and we will update this policy when we do.
 
 ## Sharing Your Information
 
